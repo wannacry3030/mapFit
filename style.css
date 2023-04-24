@@ -1,6 +1,7 @@
 :root {
   --color-brand--1: #ffb545;
   --color-brand--2: #00c46a;
+  --color-brand--3: #00bec4;
 
   --color-dark--1: #2d3439;
   --color-dark--2: #42484d;
@@ -215,6 +216,11 @@ a:visited {
 .running-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--2);
 }
+
 .cycling-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--1);
+}
+
+.skating-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--3);
 }
