@@ -14,13 +14,21 @@ const inputElevation = document.querySelector('.form__input--elevation');
 let map, mapEvent;
 
 class App {
-  constructor() {}
+  #map;
+  #mapEvent;
+
+  constructor() {
+    this._getPosition();
+  }
 
   _getPosition() {
     if (navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(this._loadMap, function () {
-        alert('Nao foi possivel encontrar sua localização');
-      });
+      navigator.geolocation.getCurrentPosition(
+        this._loadMap.bind(this),
+        function () {
+          alert('Nao foi possivel encontrar sua localização');
+        }
+      );
   }
 
   _loadMap(position) {
@@ -30,16 +38,16 @@ class App {
 
     const coords = [latitude, longitude];
 
-    map = L.map('map').setView(coords, 13);
+    this.#map = L.map('map').setView(coords, 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+    }).addTo(this.#map);
 
     //handling clicks on map
-    map.on('click', function (mapE) {
-      mapEvent = mapE;
+    this.#map.on('click', function (mapE) {
+      this.#mapEvent = mapE;
       form.classList.remove('hidden');
       inputDistance.focus();
     });
@@ -53,7 +61,6 @@ class App {
 }
 
 const app = new App();
-app._getPosition();
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
