@@ -243,7 +243,7 @@ class App {
   </li> 
         `;
 
-    form.insertAdjacentElement('afterend', html);
+    form.insertAdjacentHTML('afterend', html);
   }
 }
 
