@@ -14,7 +14,7 @@ class Workout {
     // prettier-ignore
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    this.description = `${this.type[0].toUppercase()}${
+    this.description = `${this.type[0].toUpperCase()}${
       months[this.type.slice(1)]
     } on ${this.date.getMonth()}`;
   }
@@ -243,7 +243,7 @@ class App {
   </li> 
         `;
 
-    form.insertAdjacentElement('afterend');
+    form.insertAdjacentElement('afterend', html);
   }
 }
 
