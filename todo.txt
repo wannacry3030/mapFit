@@ -1,0 +1,12 @@
+mudar as cores 
+usuario edita o workout
+usuario remove o workout
+usuario remove todos os workouts
+usuario tem um filtro para buscar workouts
+transformar os objetos running e cycling em objetos da Local storage
+criar mensagens de erros e confirmações mais realistas (not alerts)
+////hard ones////
+posicionar o mapa para mostrar TODOS os workouts
+usuario consegue desenhar linhas ou formatos ao inves de apenas pontos
+Geocode location das coordenadas (async javascript)
+mostrar o clima da area do workout (time and place)[async javascript]
