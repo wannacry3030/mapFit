@@ -1,6 +1,6 @@
 :root {
-  --color-brand--1: #ffb545;
-  --color-brand--2: #00c46a;
+  --color-brand--1: #50b9cc;
+  --color-brand--2: #bf2e94;
   --color-brand--3: #00bec4;
 
   --color-dark--1: #000000;
@@ -29,7 +29,7 @@ body {
   height: 100vh;
   overscroll-behavior-y: none;
 
-  background-color: #42484d;
+  background-image: linear-gradient(to top left, #50b9cc 0%, #bf2e94 100%);
   padding: 2.5rem;
 
   display: flex;
@@ -44,7 +44,10 @@ a:visited {
 /* SIDEBAR */
 .sidebar {
   flex-basis: 50rem;
-  background-color: var(--color-dark--1);
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   padding: 3rem 5rem 4rem 5rem;
   display: flex;
   flex-direction: column;
